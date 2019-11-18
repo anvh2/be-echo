@@ -7,9 +7,16 @@ service EchoService {
 }
 
 message EchoRequest {
-    
+    string msg = 1;
+}
+
+message Error {
+    string domain = 1;
+    int32 code = 2;
+    string message =3;
 }
 
 message EchoResponse {
-    
+    string msg = 1;
+    Error error = 2;
 }
